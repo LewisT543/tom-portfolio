@@ -3,7 +3,7 @@
 import Link from "next/link";
 import {NavItem} from "@/types";
 import {orDefault} from "@/lib/stringUtils";
-import SVG from "@/generics/SVG";
+import SVG from "@/components/SVG";
 
 export interface HeaderProps {
   navItems: NavItem[]

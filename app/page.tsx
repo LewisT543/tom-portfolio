@@ -1,5 +1,5 @@
 import styles from './page.module.css'
-import PortfolioHome from "@/components/PortfolioHome";
+import PortfolioHome from "@/sections/PortfolioHome";
 
 
 export default function Home() {

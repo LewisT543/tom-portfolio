@@ -1,11 +1,11 @@
 "use client"
 
-import WithLinkAndTitle, {WithLinkAndTitleProps} from "@/generics/WithLinkAndTitle";
-import SVG, {SVGProps} from "@/generics/SVG";
+import WithLinkAndTitle, {WithLinkAndTitleProps} from "@/components/WithLinkAndTitle";
+import SVG, {SVGProps} from "@/components/SVG";
 import NewsletterSignupForm, {NewsletterSignupFormProps} from "@/fragments/NewsletterSignupForm";
 import BasicDescription, {BasicDescriptionProps} from "@/fragments/BasicDescription";
 import Copyright, {CopyrightProps} from "@/fragments/Copyright";
-import FlatNavList, {FlatNavListProps} from "@/generics/FlatNavList";
+import FlatNavList, {FlatNavListProps} from "@/components/FlatNavList";
 
 interface SVGWithLinkAndTitleProps extends SVGProps, WithLinkAndTitleProps { }
 

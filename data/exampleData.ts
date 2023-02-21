@@ -1,4 +1,6 @@
 import {AboutItemProps} from "@/fragments/AboutItem";
+import {CardProps} from "@/components/Card";
+import {HorizontalCardProps} from "@/components/HorizontalCard";
 
 export const ABOUT_ITEMS: AboutItemProps[] = [
   { title: 'Learning Lead', image: '/book-open-solid-24.png', content: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec malesuada bibendum nisl, quis imperdiet ante ornare ac. Mauris vitae lorem dui. Praesent nulla lorem, ullamcorper non' },
@@ -47,4 +49,24 @@ export const FOOTER_DATA = {
 
 export const HEADER_DATA = {
   NAV_PROPS: {...navProps, title: 'Thomas Gardner | Education Consultant'}
+}
+
+export const HERO_PROPS = {
+  imageName: 'hero-1920.png',
+  imageSizes: [600, 1280, 1920],
+  topTitle: 'Thomas Gardner',
+  lowerTitle: 'Education Consultant',
+  pText: 'Filling your kids brains with mush since 1997...'
+}
+
+export const CARD_PROPS: CardProps = {
+  title: 'The title of this card',
+  description: 'Some quick example text to build on the card title and make up the\n' +
+    '            bulk of the card\'s content.',
+  buttonText: 'Get started --->',
+}
+
+export const H_CARD_PROPS: HorizontalCardProps = {
+  ...CARD_PROPS,
+  lastUpdatedText: 'Last updated 27 minutes ago.',
 }

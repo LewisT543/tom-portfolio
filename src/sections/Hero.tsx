@@ -1,12 +1,20 @@
 import React, {useState} from 'react'
 import Image from 'next/image'
 import useDimensions from 'react-cool-dimensions';
-import {arrayCeil} from 'src/lib/arrayUtils';
-import Button from "@/generics/Button";
+import Button from "@/components/Button";
+import {arrayCeil} from "@/lib/arrayUtils";
 
-export default function Hero() {
-  const [heroImage, setHeroImage] = useState('hero-1920.png')
-  const imageSizes = [600, 1280, 1920]
+export interface HeroProps {
+  imageName: string
+  imageSizes: number[]
+  topTitle?: string
+  lowerTitle?: string
+  pText?: string
+}
+
+export default function Hero(props: HeroProps) {
+  const { imageName, imageSizes, topTitle, lowerTitle, pText } = props
+  const [heroImage, setHeroImage] = useState(imageName)
 
   const { observe, unobserve, width, height, entry } = useDimensions({
     onResize: ({ observe, unobserve, width, height, entry }) => {
@@ -28,12 +36,12 @@ export default function Hero() {
         fill
       />
       <div className="flex flex-col justify-center items-center px-3">
-        <h1 className=" text-center text-3xl md:text-5xl text-white font-bold drop-shadow-lg">Thomas Gardner <br />
+        <h1 className=" text-center text-3xl md:text-5xl text-white font-bold drop-shadow-lg">{topTitle}<br />
           <br />
-          <span className="text-primary">Education Consultant</span>
+          <span className="text-primary">{lowerTitle}</span>
         </h1>
         <br />
-        <p className="mt-5 text-center text-xl text-white opacity-90">Filling your kids brains with mush since 1997...</p>
+        <p className="mt-5 text-center text-xl text-white opacity-90">{pText}</p>
         <Button href="/">Get started</Button>
       </div>
     </div>
